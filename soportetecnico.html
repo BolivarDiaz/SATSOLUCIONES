@@ -22,20 +22,56 @@
         <!-- Custom styles for this template -->
         <link href="css/grayscale.min.css" rel="stylesheet">
       
+        <script>
+
+
+
+          function go(){
+         
+          var select1=document.getElementById("exampleFormControlSelect1");
+          var select2=document.getElementById("exampleFormControlSelect2");
+          var valorvia=select2.options[select2.selectedIndex].value;
+     
+            switch(valorvia){
+
+        case "Telefonica":
+   
+        break;
+
+        case "Chat":
+
+     location.href="chat.html";
     
+        break;
+
+        case "Videollamada":
+location.href="videollamada.html";
+
+        break;
+
+
+
+            }
+            
+
+           
+          }
+          
+          
+          </script>
 
 </head>
 
 
 <body>
   <h1>Servicio de soporte</h1>
-<form>
+
   
     <div class="form-group">
       <label for="exampleFormControlSelect1">Seleccion el tipo de problema</label>
       <select class="form-control" id="exampleFormControlSelect1">
         <option>Problemas de Conexion</option>
-        <option>Problemas de aplicacion</option>
+        <option>Problemas de Aplicacion</option>
         <option>Otros</option>
       </select>
     </div>
@@ -51,7 +87,15 @@
       <label for="exampleFormControlTextarea1">Breve descripcion del problema (Opcional)</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Solicitar</button>
-  </form>
+    
+    <button onclick="go()" class="btn btn-primary">Solicitar</button>
+
+
+
+
+
+
+
+
   </body>
   </html>
